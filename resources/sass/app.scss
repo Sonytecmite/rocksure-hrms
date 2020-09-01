@@ -7,3 +7,54 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 @import '~admin-lte/dist/css/adminlte.css';
+
+//Font Awesome CSS Files
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+body {
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-base;
+}
+nav li ul {
+    margin-left: $left-margin;
+}
+.menu-open{
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.blue{
+    color: $blue;
+}
+.indigo{
+    color: $indigo;
+}
+.purple{
+    color: $purple;
+}
+.pink{
+    color: $pink;
+}
+.red{
+    color: $red;
+}
+.orange{
+    color: $orange;
+}
+.yellow{
+    color: $yellow;
+}
+.green{
+    color: $green;
+}
+.teal{
+    color: $teal;
+}
+.cyan{
+    color: $cyan;
+}
+.white{
+    color:$white; 
+}

@@ -13,16 +13,15 @@ $purple: #9561e2;
 $pink: #f66d9b;
 $red: #e3342f;
 $orange: #f6993f;
-$yellow: #ffed4a;
+$yellow: #eaca04;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+$white: #ffffff;
 
 //Font Awesome SVG Fonts
 $fa-font-path:   "../webfonts";
 
-//Font Awesome CSS Files
-@import "~@fortawesome/fontawesome-free/scss/fontawesome";
-@import "~@fortawesome/fontawesome-free/scss/regular";
-@import "~@fortawesome/fontawesome-free/scss/solid";
-@import "~@fortawesome/fontawesome-free/scss/brands";
+// Submenu left margin
+$left-margin: 15px;
+
