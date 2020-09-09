@@ -47,9 +47,10 @@
 				<!-- Sidebar user panel (optional) -->
 				<div class="user-panel mt-3 pb-3 mb-3 d-flex">
 					<div class="image">
-						<img src="/img/burglar.png" class="img-circle elevation-2" alt="User Image">
+						<img src="/img/burglar.png" class="img-circle elevation-2 mt-2" alt="User Image">
 					</div>
 					<div class="info">
+                        <span class="yellow">Logged in as:</span>
 						<a href="#" class="d-block">{{ Auth::user()->name }}</a>
 					</div>
 				</div>
@@ -68,6 +69,54 @@
 								</p>
 							</router-link>
 						</li>
+                        <li class="nav-item">
+                            <router-link href="#" to="/add-employee" class="nav-link">
+                                <i class="nav-icon fas fa-user-plus"></i>
+                                <p>Add New Employee</p>
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link href="#" to="/employees-list" class="nav-link">
+                                <i class="nav-icon fas fa-arrow-alt-circle-down"></i>
+                                <p>Employees List</p>
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link href="#" to="/employees-contacts" class="nav-link">
+                                <i class="nav-icon fas fa-phone-square-alt"></i>
+                                <p>Contacts</p>
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link href="#" to="/employees-education" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>Educational Information</p>
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link href="#" to="/employment-history" class="nav-link">
+                                <i class="nav-icon fas fa-briefcase"></i>
+                                <p>Employment History</p>
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link href="#" to="/employees-dependants" class="nav-link">
+                                <i class="nav-icon fas fa-donate"></i>
+                                <p>Employees Dependants</p>
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link href="#" to="/employees-beneficiary" class="nav-link">
+                                <i class="nav-icon fas fa-gift"></i>
+                                <p>Beneficiary</p>
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link href="#" to="/employees-nextofkins" class="nav-link">
+                                <i class="nav-icon fas fa-gift"></i>
+                                <p>Next of Kins</p>
+                            </router-link>
+                        </li>
 						<li class="nav-item has-treeview">
 							<a href="#" class="nav-link">
 								<i class="nav-icon fas fa-cog"></i>
@@ -83,12 +132,90 @@
                                         <p>Users</p>
                                     </router-link>
                                 </li>
-                                <!-- <li class="nav-item">
-                                    <router-link to="/users" class="nav-link">
-                                        <i class="fas fa-users nav-icon"></i>
-                                        <p>Incoming</p>
+                                <li class="nav-item">
+                                    <router-link to="/employees-accounts-details" class="nav-link">
+                                        <i class="fas fa-ambulance nav-icon"></i>
+                                        <p>Accounts Details</p>
                                     </router-link>
-                                </li> -->
+                                </li>
+                                <li class="nav-item">
+                                    <router-link to="/attendance" class="nav-link">
+                                        <i class="fas fa-ambulance nav-icon"></i>
+                                        <p>Attendance</p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item">
+                                    <router-link href="#" to="/calender" class="nav-link">
+                                        <i class="nav-icon fas fa-door-open"></i>
+                                        <p>Calender</p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item">
+                                    <router-link to="/departments" class="nav-link">
+                                        <i class="fas fa-building nav-icon"></i>
+                                        <p>Departments</p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item">
+                                    <router-link to="/sites" class="nav-link">
+                                        <i class="fas fa-hard-hat nav-icon"></i>
+                                        <p>Mine Sites</p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item">
+                                    <router-link to="/medical-history" class="nav-link">
+                                        <i class="fas fa-ambulance nav-icon"></i>
+                                        <p>Medical History</p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item">
+                                    <router-link to="/employees-salary" class="nav-link">
+                                        <i class="fas fa-ambulance nav-icon"></i>
+                                        <p>Salary Info</p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item">
+                                    <router-link to="/employees-transfer-history" class="nav-link">
+                                        <i class="fas fa-ambulance nav-icon"></i>
+                                        <p>Transfer History</p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item">
+                                    <router-link to="/employees-change-of-status" class="nav-link">
+                                        <i class="fas fa-ambulance nav-icon"></i>
+                                        <p>Change of Status History</p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item">
+                                    <router-link to="/payroll" class="nav-link">
+                                        <i class="fas fa-ambulance nav-icon"></i>
+                                        <p>Payroll</p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item">
+                                    <router-link to="/employees-upgrade-history" class="nav-link">
+                                        <i class="fas fa-ambulance nav-icon"></i>
+                                        <p>Upgrage History</p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item">
+                                    <router-link to="/disciplinary-actions" class="nav-link">
+                                        <i class="fas fa-ambulance nav-icon"></i>
+                                        <p>Disciplinary Actions</p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item">
+                                    <router-link to="/concerns" class="nav-link">
+                                        <i class="fas fa-address-card nav-icon"></i>
+                                        <p>Workers Concerns</p>
+                                    </router-link>
+                                </li>
+                                <li class="nav-item">
+                                    <router-link to="/leaves" class="nav-link">
+                                        <i class="fas fa-parachute-box nav-icon"></i>
+                                        <p>Leaves</p>
+                                    </router-link>
+                                </li>
                             </ul>
 						</li>
 						<li class="nav-item">
@@ -127,8 +254,12 @@
 				<!-- Main content -->
 				<div class="content">
 					<div class="container-fluid">
+                        <!-- Display content from server  -->
 						<router-view></router-view>
-					</div><!-- /.container-fluid -->
+
+                        <!-- set progressbar -->
+                        <vue-progress-bar></vue-progress-bar>
+					</div><!-- /.container-fluid --> 
 				</div>
 				<!-- /.content -->
 			</div>
