@@ -1,0 +1,35 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateChangeOfStatusHistoriesTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('change_of_status_histories', function (Blueprint $table) {
+            $table->id();
+            $table->string('emp_id')->references('emp_id')->on('employees');
+            $table->string('prev_status');
+            $table->string('current_status');
+            $table->date("change_date");
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('change_of_status_histories');
+    }
+}
