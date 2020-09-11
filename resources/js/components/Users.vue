@@ -129,6 +129,7 @@
                 users: {},
                 // Create a new Form instance
                 form: new Form({
+                    id: '',
                     name: '',
                     email: '',
                     password: '',
@@ -140,7 +141,22 @@
         methods: {
             //update user's info
             updateUser(){
-                console.log("editing user ...");
+                this.$Progress.start();
+                this.form.put('api/user/'+this.form.id)
+                .then(() => {
+
+                   $('#addUserModal').modal('hide');
+                        Swal.fire(
+                        'Updated!',
+                        'User\'s info updated.',
+                        'success'
+                        )
+                        Fire.$emit('AfterUserCreated');
+                        this.$Progress.finish();
+                })
+                .catch(() => {
+                    this.$Progress.fail();
+                })
             },
             //reset modal
             newModal(){

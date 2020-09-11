@@ -3,6 +3,7 @@
 
 // Variables
 @import 'variables';
+@import "~@fortawesome/fontawesome-free/scss/mixins";
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
@@ -13,6 +14,7 @@
 @import "~@fortawesome/fontawesome-free/scss/regular";
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
+
 
 body {
     font-family: $font-family-sans-serif;
@@ -57,4 +59,25 @@ nav li ul {
 }
 .white{
     color:$white; 
+}
+.main-sidebar {
+    position: fixed !important;
+    top: 0px;
+    left: 0px;
+}
+
+.page-title {
+    font-size: 1.5em;
+    font-weight: normal;
+    border-bottom: $dashed-border;
+    padding-bottom: 1em;
+}
+.photo-box {
+    border: 1px solid rgb(156, 154, 154);
+    border-radius: 2px;
+    width: 40mm;
+    height: 50mm;
+}
+.line {
+    border-top: $dashed-border;
 }

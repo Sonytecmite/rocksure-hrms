@@ -15,7 +15,7 @@ class CreateSkillsSetTable extends Migration
     {
         Schema::create('skills_set', function (Blueprint $table) {
             $table->id();
-            $table->stirng("emp_id")->references("emp_id")->on("employees");
+            $table->string("emp_id")->references("emp_id")->on("employees");
             $table->string("skill");
         });
     }

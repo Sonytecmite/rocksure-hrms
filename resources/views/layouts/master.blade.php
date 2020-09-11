@@ -6,10 +6,10 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<!-- CSRF Token -->
 		<meta name="csrf-token" content="{{ csrf_token() }}">
-		<title>Rocksure HRM System | Starter</title>
+		<title>Rocksure HRM System | Admin Dashboard</title>
 		<link rel="stylesheet" href="/css/app.css" rel="stylesheet">
 	</head>
-	<body class="hold-transition sidebar-mini">
+	<body class="hold-transition sidebar-mini " style="height: auto">
 		<div class="wrapper" id="app">
 			<!-- Navbar -->
 			<nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -43,32 +43,32 @@
 				</a>
 
 				<!-- Sidebar -->
-				<div class="sidebar">
-				<!-- Sidebar user panel (optional) -->
-				<div class="user-panel mt-3 pb-3 mb-3 d-flex">
-					<div class="image">
-						<img src="/img/burglar.png" class="img-circle elevation-2 mt-2" alt="User Image">
-					</div>
-					<div class="info">
+				<div class="sidebar sidebar-dark-primary elevation-4">
+                    
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="/img/burglar.png" class="img-circle elevation-2 mt-2" alt="User Image">
+                    </div>
+                    <div class="info">
                         <span class="yellow">Logged in as:</span>
-						<a href="#" class="d-block">{{ Auth::user()->name }}</a>
-					</div>
-				</div>
+                        <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+                    </div>
+                </div>
 
-				<!-- Sidebar Menu -->
-				<nav class="mt-2">
-					<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-						<!-- Add icons to the links using the .nav-icon class
-							with font-awesome or any other icon font library -->
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-						<li class="nav-item">
-							<router-link to="/dashboard" class="nav-link">
-								<i class="nav-icon fas fa-tachometer-alt"></i>
-								<p>
-									Dashboard
-								</p>
-							</router-link>
-						</li>
+                        <li class="nav-item">
+                            <router-link to="/dashboard" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Dashboard
+                                </p>
+                            </router-link>
+                        </li>
+                    
                         <li class="nav-item">
                             <router-link href="#" to="/add-employee" class="nav-link">
                                 <i class="nav-icon fas fa-user-plus"></i>
@@ -89,7 +89,7 @@
                         </li>
                         <li class="nav-item">
                             <router-link href="#" to="/employees-education" class="nav-link">
-                                <i class="nav-icon fas fa-book"></i>
+                                <i class="nav-icon fas fa-graduation-cap"></i>
                                 <p>Educational Information</p>
                             </router-link>
                         </li>
@@ -117,13 +117,13 @@
                                 <p>Next of Kins</p>
                             </router-link>
                         </li>
-						<li class="nav-item has-treeview">
-							<a href="#" class="nav-link">
-								<i class="nav-icon fas fa-cog"></i>
-								<p>
-									Management
-									<i class="right fas fa-angle-left"></i>
-								</p>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-cog"></i>
+                                <p>
+                                    Management
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
@@ -217,16 +217,16 @@
                                     </router-link>
                                 </li>
                             </ul>
-						</li>
-						<li class="nav-item">
-							<router-link to="/profile" class="nav-link">
-								<i class="nav-icon fas fa-user"></i>
-								<p>
-									Profile
-								</p>
-							</router-link>
-						</li>
-						<li class="nav-item">
+                        </li>
+                        <li class="nav-item">
+                            <router-link to="/profile" class="nav-link">
+                                <i class="nav-icon fas fa-user"></i>
+                                <p>
+                                    Profile
+                                </p>
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
@@ -240,11 +240,11 @@
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
-						</li>
-					</ul>
-				</nav>
-				<!-- /.sidebar-menu -->
-				</div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
 				<!-- /.sidebar -->
 			</aside>
 
