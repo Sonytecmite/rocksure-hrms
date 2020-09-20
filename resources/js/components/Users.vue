@@ -1,6 +1,6 @@
 <template>
-    <div class="container">
-        <div class="col-md-12 mt-5">
+    <div class="container pt-4">
+        <div class="col-md-12">
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Users List</h3>
@@ -202,7 +202,11 @@
             },
             //Loads users from db
             loadUsers(){
-                axios.get('api/user').then(({data}) => (this.users = data.data));
+                this.$Progress.start();
+                axios.get('api/user').then(({data}) => {
+                    this.users = data.data;
+                    this.$Progress.finish();
+                });
             },
 
             //Submit the form via a POST request

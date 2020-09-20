@@ -1,5 +1,5 @@
 <template>
-    <div class="container mt-4">
+    <div class="container pt-4">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <h3 class="page-title">Employee Contact Information</h3>
@@ -15,9 +15,8 @@
                                 <has-error :form="form" field="phone1"></has-error>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="phone2">Phone 2 <sup class="red">*</sup></label>
-                            <input v-model="form.phone2" id="phone2" type="phone" name="phone2" required  class="form-control" :class="{ 'is-invalid': form.errors.has('phone2') }">
-                            <has-error :form="form" field="phone2"></has-error>
+                            <label for="phone2">Phone 2</label>
+                            <input v-model="form.phone2" id="phone2" type="phone" name="phone2" class="form-control">
                         </div>
                     </div>
                     <div class="row">
@@ -33,37 +32,75 @@
                     </div>
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <label for="residential_address">Residential Address <sup class="red">*</sup></label>
-                            <input v-model="form.residential_address" id="residential_address" type="text" name="residential_address" class="form-control" :class="{ 'is-invalid': form.errors.has('residential_address') }">    
-                            <has-error :form="form" field="residential_address"></has-error>
+                            <label for="residential_address1">Home Address 1 (On Site) <sup class="red">*</sup></label>
+                            <input v-model="form.residential_address1" id="residential_address1" type="text" name="residential_address1" required class="form-control" :class="{ 'is-invalid': form.errors.has('residential_address1') }">    
+                            <has-error :form="form" field="residential_address1"></has-error>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="gps_address">GPS Address <sup class="red">*</sup></label>
-                            <input v-model="form.gps_address" id="gps_address" type="text" name="gps_address" required  class="form-control" :class="{ 'is-invalid': form.errors.has('gps_address') }">
-                            <has-error :form="form" field="gps_address"></has-error>
+                            <label for="residential_address2">Home Address 2 (Off Site) <sup class="red">*</sup></label>
+                            <input v-model="form.residential_address2" id="residential_address2" type="text" name="residential_address2" required class="form-control" :class="{ 'is-invalid': form.errors.has('residential_address2') }">    
+                            <has-error :form="form" field="residential_address2"></has-error>
                         </div>
                     </div>
-                    
-                    <div class="row justify-content-center mt-3">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="gps_address">GPS Digital Address 1 (On Site)<sup class="red">*</sup></label>
+                            <input v-model="form.gps_address1" id="gps_address1" type="text" name="gps_address1" required  class="form-control" :class="{ 'is-invalid': form.errors.has('gps_address1') }">
+                            <has-error :form="form" field="gps_address1"></has-error>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="gps_address">GPS Digital Address 2 (Off Site)<sup class="red">*</sup></label>
+                            <input v-model="form.gps_address2" id="gps_address2" type="text" name="gps_address2" required  class="form-control" :class="{ 'is-invalid': form.errors.has('gps_address2') }">
+                            <has-error :form="form" field="gps_address2"></has-error>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
                         <div class="col-md-12">
                             <h3 class="page-title">Emergency Contact Information</h3>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="form-group col-md-4">
-                            <label for="full_name">Full Name <sup class="red">*</sup></label>
-                            <input v-model="form.full_name" id="full_name" type="text" name="full_name" class="form-control" :class="{ 'is-invalid': form.errors.has('full_name') }">    
-                            <has-error :form="form" field="full_name"></has-error>
+                        <div class="form-group col-md-6">
+                            <label for="full_name">First Name <sup class="red">*</sup></label>
+                            <input v-model="form.first_name" id="first_name" type="text" name="first_name" class="form-control" :class="{ 'is-invalid': form.errors.has('first_name') }">    
+                            <has-error :form="form" field="first_name"></has-error>
                         </div>
-                        <div class="form-group col-md-4">
-                            <label for="relation">Relation <sup class="red">*</sup></label>
-                            <input v-model="form.relation" id="relation" type="text" name="relation" required  class="form-control" :class="{ 'is-invalid': form.errors.has('relation') }">
-                            <has-error :form="form" field="relation"></has-error>
+                        <div class="form-group col-md-6">
+                            <label for="last_name">Last Name <sup class="red">*</sup></label>
+                            <input v-model="form.last_name" id="last_name" type="text" name="last_name" class="form-control" :class="{ 'is-invalid': form.errors.has('last_name') }">    
+                            <has-error :form="form" field="last_name"></has-error>
                         </div>
-                        <div class="form-group col-md-4">
-                            <label for="relation">Phone <sup class="red">*</sup></label>
-                            <input v-model="form.phone" id="relation" maxlength="10" type="phone" name="phone" required  class="form-control" :class="{ 'is-invalid': form.errors.has('phone') }">
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="other_name">Other Name <sup class="red">*</sup></label>
+                            <input v-model="form.other_name" id="other_name" type="text" name="other_name" class="form-control" :class="{ 'is-invalid': form.errors.has('other_name') }">    
+                            <has-error :form="form" field="other_name"></has-error>
+                        </div>
+                        
+                        <div class="form-group col-md-6">
+                            <label for="phone">Phone <sup class="red">*</sup></label>
+                            <input v-model="form.phone" id="phone" maxlength="10" type="phone" name="phone" required  class="form-control" :class="{ 'is-invalid': form.errors.has('phone') }">
                             <has-error :form="form" field="phone"></has-error>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="relationship">Relationship <sup class="red">*</sup></label>
+                            <input v-model="form.relationship" id="relationship" type="text" name="relationship" required  class="form-control" :class="{ 'is-invalid': form.errors.has('relationship') }">
+                            <has-error :form="form" field="relationship"></has-error>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="home_address">Home Address <sup class="red">*</sup></label>
+                            <input v-model="form.home_address" id="home_address" type="text" name="home_address" required  class="form-control" :class="{ 'is-invalid': form.errors.has('home_address') }">
+                            <has-error :form="form" field="home_address"></has-error>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="digital_address">Digital Address <sup class="red">*</sup></label>
+                            <input v-model="form.digital_address" id="digital_address" type="text" name="digital_address" required  class="form-control" :class="{ 'is-invalid': form.errors.has('digital_address') }">
+                            <has-error :form="form" field="digital_address"></has-error>
                         </div>
                     </div>
                 </div>    
@@ -89,9 +126,37 @@
                     phone2: '',
                     email: '',
                     postal_address: '',
-                    residentail_address: '',
-                    gps_address: '',
+                    residentail_address1: '',
+                    residentail_address2: '',
+                    gps_address1: '',
+                    gps_address2: '',
+                    first_name: '',
+                    last_name: '',
+                    other_name: '',
+                    relationship: '',
+                    phone: '',
+                    digital_address: '',
+                    home_address: '',
                 }),
+            }
+        },
+        methods: {
+            createContact(){
+                this.$Progress.start();
+                this.form.post('api/contact')
+                .then(() => {
+                    setTimeout(() => {
+                        Toast.fire({
+                            icon: "success",
+                            title: "Employee Contact Saved Successfully!",
+                        });
+                    }, 500);
+                
+                    this.$Progress.finish();
+                })
+                .catch(() => {
+                     this.$Progress.fail();
+                })
             }
         },
         mounted() {

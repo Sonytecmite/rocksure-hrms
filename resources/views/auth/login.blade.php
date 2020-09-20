@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body class="hold-transition login-page">
-        <div class="login-box">
+        <div class="login-box" id="app">
             <div class="login-logo">
                 <img src="/img/rocksure.png" alt="Rockure International Logo" width="80%">
             </div>

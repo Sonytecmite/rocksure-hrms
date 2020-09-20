@@ -59,6 +59,7 @@ Vue.use(VueRouter)
 
 let routes = [
     { path: '/dashboard', component: require('./components/Dashboard.vue').default },
+    { path: '/passport', component: require('./components/Developer.vue').default },
     { path: '/users', component: require('./components/Users.vue').default },
     { path: '/profile', component: require('./components/Profile.vue').default },
     { path: '/departments', component: require('./components/Departments.vue').default },
@@ -83,6 +84,7 @@ let routes = [
     { path: '/employment-history', component: require('./components/EmploymentHistory.vue').default },
     { path: '/calender', component: require('./components/Calender.vue').default },
     { path: '/employee-beneficiary', component: require('./components/Beneficiary.vue').default },
+    { path: '/employees-working-experience', component: require('./components/WorkingExperience.vue').default },
   ]
 
 const router = new VueRouter({
@@ -109,6 +111,21 @@ Vue.filter('formatDate', function(date){
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+
+Vue.component(
+    'passport-clients',
+    require('./components/passport/Clients.vue').default
+);
+
+Vue.component(
+    'passport-authorized-clients',
+    require('./components/passport/AuthorizedClients.vue').default
+);
+
+Vue.component(
+    'passport-personal-access-tokens',
+    require('./components/passport/PersonalAccessTokens.vue').default
+);
 // Vue.component('dashboard', require('./components/Dashboard.vue'));
 /**
  * Next, we will create a fresh Vue application instance and attach it to

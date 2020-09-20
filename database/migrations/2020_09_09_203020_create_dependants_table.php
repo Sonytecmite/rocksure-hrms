@@ -18,7 +18,6 @@ class CreateDependantsTable extends Migration
             $table->string("emp_id")->references("emp_id")->on("employees");
             $table->string("first_name");
             $table->string("last_name");
-            $table->integer("age");
             $table->char("contact");
             $table->date("dob");
             $table->string("photo");

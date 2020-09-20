@@ -70,14 +70,26 @@ nav li ul {
     font-size: 1.5em;
     font-weight: normal;
     border-bottom: $dashed-border;
-    padding-bottom: 1em;
+    padding-bottom: .5em;
 }
 .photo-box {
-    border: 1px solid rgb(156, 154, 154);
+    border: 8px ridge rgb(226, 223, 223);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 2px;
-    width: 40mm;
-    height: 50mm;
+    width: 35mm;
+    height: 45mm;
 }
 .line {
     border-top: $dashed-border;
+}
+sup {
+    padding-top: .5em;
+}
+label .label-desc {
+    font-size: .8em;
+}
+.main-sider {
+    @include scrollbars(.5em, #123456);
 }

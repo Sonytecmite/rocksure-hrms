@@ -45561,17 +45561,46 @@ nav li ul {
   font-size: 1.5em;
   font-weight: normal;
   border-bottom: 1px dashed #dad8d8;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
 }
 
 .photo-box {
-  border: 1px solid #9c9a9a;
+  border: 8px ridge #e2dfdf;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 2px;
-  width: 40mm;
-  height: 50mm;
+  width: 35mm;
+  height: 45mm;
 }
 
 .line {
   border-top: 1px dashed #dad8d8;
+}
+
+sup {
+  padding-top: 0.5em;
+}
+
+label .label-desc {
+  font-size: 0.8em;
+}
+
+.main-sider::-webkit-scrollbar {
+  width: 0.5em !important;
+  height: 0.5em !important;
+}
+
+.main-sider::-webkit-scrollbar-thumb {
+  background: #123456 !important;
+}
+
+.main-sider::-webkit-scrollbar-track {
+  background: #899aab !important;
+}
+
+.main-sider {
+  scrollbar-face-color: #123456 !important;
+  scrollbar-track-color: #899aab !important;
 }
 
